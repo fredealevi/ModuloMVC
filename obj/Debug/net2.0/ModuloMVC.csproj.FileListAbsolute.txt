@@ -1,0 +1,6 @@
+C:\Projetos\Dio\ModuloMVC\obj\Debug\net2.0\ModuloMVC.csproj.AssemblyReference.cache
+C:\Projetos\Dio\ModuloMVC\obj\Debug\net2.0\ModuloMVC.csproj.SuggestedBindingRedirects.cache
+C:\Projetos\Dio\ModuloMVC\obj\Debug\net2.0\ModuloMVC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\Dio\ModuloMVC\obj\Debug\net2.0\ModuloMVC.AssemblyInfoInputs.cache
+C:\Projetos\Dio\ModuloMVC\obj\Debug\net2.0\ModuloMVC.AssemblyInfo.cs
+C:\Projetos\Dio\ModuloMVC\obj\Debug\net2.0\ModuloMVC.csproj.CoreCompileInputs.cache
