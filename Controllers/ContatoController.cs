@@ -40,6 +40,29 @@ namespace ModuloMVC.Controllers
             return View(contato);
         }
 
+        [HttpGet]
+        public IActionResult Editar (int id)
+        {
+            var contato = _context.Contatos.Find(id);
 
+            if (contato == null)
+                return NotFound();
+
+            return View(contato);
+        }
+        [HttpPost]
+        public IActionResult Editar (Contato contatoAtualizado)
+        {
+            var contato = _context.Contatos.Find(contatoAtualizado.Id);
+
+            contato.Nome = contatoAtualizado.Nome;
+            contato.Telefone = contatoAtualizado.Telefone;
+            contato.Ativo = contatoAtualizado.Ativo;
+
+            _context.Contatos.Update(contato);
+            _context.SaveChanges();
+
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
