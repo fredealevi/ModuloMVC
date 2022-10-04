@@ -64,5 +64,39 @@ namespace ModuloMVC.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+
+        [HttpGet]
+        public IActionResult Detalhes(int id)
+        {
+            var contato = _context.Contatos.Find(id);
+
+            if (contato == null)
+                return RedirectToAction(nameof(Index));
+
+            return View(contato);
+        }
+
+        [HttpGet]
+        public IActionResult Deletar(int id)
+        {
+             var contato = _context.Contatos.Find(id);
+
+            if (contato == null)
+                return RedirectToAction(nameof(Index));
+
+            return View(contato);
+        }
+
+        [HttpPost]
+        public IActionResult Deletar (Contato contatoDeletar)
+        {
+            var contato = _context.Contatos.Find(contatoDeletar.Id);
+
+            _context.Contatos.Remove(contato);
+            _context.SaveChanges();
+
+            return RedirectToAction(nameof(Index));
+        }
+
     }
 }
